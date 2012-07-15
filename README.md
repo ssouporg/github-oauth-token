@@ -48,8 +48,8 @@ Deploying the app
 
 If you don't feel like creating a new app engine app, *for test purposes and low loads* I can register your application
 on my deployed app available at ```http://github-oauth-token.appspot.com```.
-You will need to give me your ```client_secret``` though ;-)
 Please <a href="mailto: belluster@gmail.com">contact me</a>.
+You will need to tell me your ```client_secret``` though ;-)
 
 Examples
 -------------------
