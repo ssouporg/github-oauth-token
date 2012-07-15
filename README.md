@@ -7,7 +7,7 @@ The service offers the possibility to insert/upate rows in the lookup table; a s
 is required to perform these operations.
 
 Exchanging a temporary code for an access token
-==================
+=========
 
 A GET to the service, specifying a "client_id" contained in the lookup table and a pair "code"/"state"
 returned by GitHub authorization page (https://github.com/login/oauth/authorize), will trigger
