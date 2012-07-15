@@ -91,19 +91,6 @@ public class OAuthTokenServlet extends HttpServlet {
 	public void doPost(HttpServletRequest req, HttpServletResponse resp)
     throws IOException {
 
-        String securityCode = req.getParameter( "security_code" );
-        String client_id = req.getParameter( "client_id" );
-        String client_secret = req.getParameter( "client_secret" );
-        String origin = req.getParameter( "origin" );
-
-        if ( client_id == null || client_id.trim().length() == 0 || client_secret == null || client_secret.trim().length() == 0 ) {
-            resp.setContentType( "application/json" );
-            resp.getWriter().println( "{ error: 'Please specify client_id and client_secret' }" );
-            return;
-        }
-
-        Key clientIdKey = KeyFactory.createKey( "GitHubOAuthData", client_id );
-
         DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
 
         // we check if a security code has been stored for this instance of the app
@@ -117,12 +104,26 @@ public class OAuthTokenServlet extends HttpServlet {
             datastoreSecurityCode = new Entity( securityKey );
             datastoreSecurityCode.setProperty( "value", "please_change_me" );
             datastore.put( datastoreSecurityCode );
-
+            
             log.warning( "A security code was not found, a default one was created. In order to prevent unauthorized modifications to GitHubOAuthData it is strongly suggested to modify the security code via the datastore viewer console." );
         }
 
+        String securityCode = req.getParameter( "security_code" );
+
         // security check : security code parameter must match the security code stored in the datastore
         if ( securityCode != null && securityCode.equals( datastoreSecurityCode.getProperty( "value" ) ) ) {
+            String client_id = req.getParameter( "client_id" );
+            String client_secret = req.getParameter( "client_secret" );
+            String origin = req.getParameter( "origin" );
+
+            if ( client_id == null || client_id.trim().length() == 0 || client_secret == null || client_secret.trim().length() == 0 ) {
+                resp.setContentType( "application/json" );
+                resp.getWriter().println( "{ error: 'Please specify client_id and client_secret' }" );
+                return;
+            }
+
+            Key clientIdKey = KeyFactory.createKey( "GitHubOAuthData", client_id );
+
             if (client_secret != null) {
                 // if a client secret is specified we go for an insert/update
                 Entity newData = new Entity( clientIdKey );
