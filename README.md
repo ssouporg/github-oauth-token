@@ -40,6 +40,7 @@ Deplying the app
   - ```ant runserver```
   - launch example commands above from command line to register a new entry and exchanging a token
   - Open a browser and go to the admin console: http://localhost:8080/_ah/admin - Datastore Viewer, to have a look at the lookup table
-- Register a new app on Google App Engine and store its Application ID
+- Register a new app on Google App Engine and copy its Application ID
+- Paste the Application ID inseide the <application> tag in the file src/WEB-INF/appengine-web.xml
 - Upload the app the the newly created Application on Google App Engine, by running this command at command line:
 ```appcfg.sh update www```
