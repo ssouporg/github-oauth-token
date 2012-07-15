@@ -6,9 +6,9 @@ This is useful for client side javascript apps that need to access the GitHub v3
 to overcome browser's Cross Origin restrictions. See this blog entry from
 Christopher Chedeau for more details: http://blog.vjeux.com/2012/javascript/github-oauth-login-browser-side.html
 
-The app mantains a lookup table that associates client ids to
-- ```client_secret```: sent to the GitHub access token service
-- ```origin```: this will be the value for the Access-Control-Allow-Origin header in the response
+The app mantains a lookup table that associates a GitHub ```client_id``` to:
+- ```client_secret```: a special value required by the GitHub access token service. It can be found on the GitHub profile page, under Applications
+- ```origin```: this will be the value for the Access-Control-Allow-Origin header in the response, for CORS requests
 
 To insert/upate rows in the lookup table a security code must be specified in the request.
 
