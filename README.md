@@ -16,7 +16,7 @@ the temporary code for an access token.
 
 Example GET to exchange a GitHub temporary code for an access token:
 
-curl -i "http://APPID.appspot.com/?client_id=CLIENT_ID&code=TEMP_CODE&state=STATE"
+```curl -i "http://APPID.appspot.com/?client_id=CLIENT_ID&code=TEMP_CODE&state=STATE"```
 
 Updating the lookup table
 ==================
