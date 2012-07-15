@@ -15,7 +15,7 @@ To insert/upate rows in the lookup table a security code must be specified in th
 Exchanging a temporary code for an access token
 -------------------
 
-A GET to the service, specifying a "client_id" contained in the lookup table and a pair "code"/"state"
+A GET to the service, specifying a ```client_id``` contained in the lookup table and a pair ```code```/```state```
 returned by GitHub authorization page ```https://github.com/login/oauth/authorize```, will trigger
 a call to the GitHub access token service ```https://github.com/login/oauth/access_token``` to exchange
 the temporary code for an access token.
