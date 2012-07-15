@@ -46,6 +46,9 @@ Deploying the app
 ```curl http://APPID.appspot.com/ -d ""```
 - Go to the Google Datastore Viewer console and change the "security_code" to a secure code
 
+If you don't feel like creating a new app engine app, *for test purposes and low loads* I can register your application
+on my deployed app available at ```http://github-oauth-token.appspot.com```. Please <a href="mailto: belluster@gmail.com">contact me</a>.
+
 Examples
 -------------------
 
