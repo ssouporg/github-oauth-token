@@ -34,7 +34,7 @@ Example POST to insert/update an entry in the GitHub OAuth lookup table :
 
 ```curl http://APPID.appspot.com/ -d "client_id=CLIENT_ID&client_secret=CLIENT_SECRET&origin=ORIGIN&security_code=SECURITY_CODE"```
 
-Deplying the app
+Deploying the app
 -------------------
 
 - Download and install Google AppEngine SDK for Java: https://developers.google.com/appengine/downloads
