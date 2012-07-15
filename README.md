@@ -13,7 +13,7 @@ The app mantains a lookup table that associates a GitHub ```client_id``` to:
 To insert/upate rows in the lookup table a security code must be specified in the request.
 
 Exchanging a temporary code for an access token
-==================
+-------------------
 
 A GET to the service, specifying a "client_id" contained in the lookup table and a pair "code"/"state"
 returned by GitHub authorization page (https://github.com/login/oauth/authorize), will trigger
@@ -25,7 +25,7 @@ Example GET to exchange a GitHub temporary code for an access token:
 ```curl -i "http://APPID.appspot.com/?client_id=CLIENT_ID&code=TEMP_CODE&state=STATE"```
 
 Updating the lookup table
-==================
+-------------------
 
 A POST to the service, specifying the "client_id", the "client_secret", the "origin" and the "security_code",
 will trigger an insert/update to the lookup table for the given "client_id".
@@ -35,7 +35,7 @@ Example POST to insert/update an entry in the GitHub OAuth lookup table :
 ```curl http://APPID.appspot.com/ -d "client_id=CLIENT_ID&client_secret=CLIENT_SECRET&origin=ORIGIN&security_code=SECURITY_CODE"```
 
 Deplying the app
-==================
+-------------------
 
 - Download and install Google AppEngine SDK for Java: https://developers.google.com/appengine/downloads
 - Register a new app on Google App Engine and copy its application ID (APPID).
@@ -47,6 +47,7 @@ Deplying the app
 - Go to the Google Datastore Viewer console and change the "security_code" to a secure code
 
 Examples
+-------------------
 
-See <a href="https://github.com/alebellu/jquery-github">jquery-github</a> for an example of use.
+See <a href="https://github.com/alebellu/jquery-github">jquery-github</a> for an usage example.
 
