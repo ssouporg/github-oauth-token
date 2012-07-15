@@ -37,7 +37,7 @@ Deplying the app
 
 - Download and install Google AppEngine SDK for Java: https://developers.google.com/appengine/downloads
 - Try to run the app locally:
-  - ant runserver
+  - ```ant runserver```
   - launch example commands above from command line to register a new entry and exchanging a token
   - Open a browser and go to the admin console: http://localhost:8080/_ah/admin - Datastore Viewer, to have a look at the lookup table
 - Register a new app on Google App Engine and store its Application ID
