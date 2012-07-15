@@ -27,8 +27,8 @@ Example GET to exchange a GitHub temporary code for an access token:
 Updating the lookup table
 -------------------
 
-A POST to the service, specifying the "client_id", the "client_secret", the "origin" and the "security_code",
-will trigger an insert/update to the lookup table for the given "client_id".
+A POST to the service, specifying the ```client_id```, the ```client_secret```, the ```origin``` and the ```security_code```,
+will trigger an insert/update to the lookup table for the given ```client_id```.
 
 Example POST to insert/update an entry in the GitHub OAuth lookup table :
 
@@ -44,10 +44,12 @@ Deploying the app
 - Upload the code on the the newly created application on Google App Engine: ```appcfg.sh update www```
 - Launch a POST command to let the app create a Security Code in the datastore:
 ```curl http://APPID.appspot.com/ -d ""```
-- Go to the Google Datastore Viewer console and change the "security_code" to a secure code
+- Go to the Google Datastore Viewer console and change the ```security_code``` to a secure code
 
 If you don't feel like creating a new app engine app, *for test purposes and low loads* I can register your application
-on my deployed app available at ```http://github-oauth-token.appspot.com```. Please <a href="mailto: belluster@gmail.com">contact me</a>.
+on my deployed app available at ```http://github-oauth-token.appspot.com```.
+You will need to give me your ```client_secret``` though ;-)
+Please <a href="mailto: belluster@gmail.com">contact me</a>.
 
 Examples
 -------------------
