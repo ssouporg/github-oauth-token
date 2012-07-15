@@ -46,3 +46,7 @@ Deplying the app
 ```curl http://APPID.appspot.com/ -d ""```
 - Go to the Google Datastore Viewer console and change the "security_code" to a secure code
 
+Examples
+
+See <a href="https://github.com/alebellu/jquery-github">jquery-github</a> for an example of use.
+
