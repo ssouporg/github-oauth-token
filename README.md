@@ -36,12 +36,11 @@ Deplying the app
 ==================
 
 - Download and install Google AppEngine SDK for Java: https://developers.google.com/appengine/downloads
-- Try to run the app locally:
-  - ```ant runserver```
-  - launch example commands above from command line to register a new entry and exchanging a token
-  - Open a browser and go to the admin console: http://localhost:8080/_ah/admin - Datastore Viewer, to have a look at the lookup table
-- Register a new app on Google App Engine and copy its Application ID
-- Paste the Application ID inseide the <application> tag in the file src/WEB-INF/appengine-web.xml
+- Register a new app on Google App Engine and copy its application ID (APPID).
+- Paste the APPID inside the <application> tag in the file src/WEB-INF/appengine-web.xml
 - Recreate the war: ```ant war```
 - Upload the code on the the newly created Application on Google App Engine: ```appcfg.sh update www```
+- Launch a POST command to let the app create a Security Code in the datastore:
+```curl http://APPID.appspot.com/ -d ""```
+- Go to the Google Datastore Viewer console and change the "security_code" to a secure code
 
