@@ -2,6 +2,10 @@ github-oauth-token
 ==================
 
 Simple appengine app to exchange a github OAuth temporary code for an access token.
+This is useful for client side javascript apps that need to access the GitHub v3 api,
+to overcome browser's Cross Origin restrictions. See this blog entry from
+Christopher Chedeau for more details: http://blog.vjeux.com/2012/javascript/github-oauth-login-browser-side.html
+
 The app mantains a lookup table that associates client ids to client_secret and origin info.
 The service offers the possibility to insert/upate rows in the lookup table; a security_code
 is required to perform these operations.
@@ -37,4 +41,5 @@ Deplying the app
   - launch example commands above from command line to register a new entry and exchanging a token
   - Open a browser and go to the admin console: http://localhost:8080/_ah/admin - Datastore Viewer, to have a look at the lookup table
 - Register a new app on Google App Engine and store its Application ID
-- Upload the app the the newly created Application on Google App Engine, by running this command at command line: appcfg.sh update www
+- Upload the app the the newly created Application on Google App Engine, by running this command at command line:
+```appcfg.sh update www```
