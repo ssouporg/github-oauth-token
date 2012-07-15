@@ -38,6 +38,7 @@ Deploying the app
 -------------------
 
 - Download and install Google AppEngine SDK for Java: https://developers.google.com/appengine/downloads
+- Edit the file build.xml and change the property ```appengine.sdk``` to point to the SDK
 - Register a new app on Google App Engine and copy its application ID (APPID).
 - Paste the APPID inside the ```<application>``` tag in the file src/WEB-INF/appengine-web.xml
 - Recreate the war: ```ant war```
