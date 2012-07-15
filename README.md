@@ -57,3 +57,9 @@ Examples
 
 See <a href="https://github.com/alebellu/jquery-github">jquery-github</a> for an usage example.
 
+License
+------------
+Dual licensed:
+
+- <a href="http://alebellu.github.com/licenses/MIT-LICENSE.txt">MIT License</a>
+- <a href="http://alebellu.github.com/licenses/GPL-LICENSE.txt">GPL</a>
