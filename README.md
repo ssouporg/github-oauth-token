@@ -26,7 +26,7 @@ will trigger an insert/update to the lookup table for the given "client_id".
 
 Example POST to insert/update an entry in the GitHub OAuth lookup table :
 
-curl http://APPID.appspot.com/ -d "client_id=CLIENT_ID&client_secret=CLIENT_SECRET&origin=ORIGIN&security_code=SECURITY_CODE"
+```curl http://APPID.appspot.com/ -d "client_id=CLIENT_ID&client_secret=CLIENT_SECRET&origin=ORIGIN&security_code=SECURITY_CODE"```
 
 Deplying the app
 ==================
