@@ -37,7 +37,7 @@ Deplying the app
 
 - Download and install Google AppEngine SDK for Java: https://developers.google.com/appengine/downloads
 - Register a new app on Google App Engine and copy its application ID (APPID).
-- Paste the APPID inside the <application> tag in the file src/WEB-INF/appengine-web.xml
+- Paste the APPID inside the ```<application>``` tag in the file src/WEB-INF/appengine-web.xml
 - Recreate the war: ```ant war```
 - Upload the code on the the newly created Application on Google App Engine: ```appcfg.sh update www```
 - Launch a POST command to let the app create a Security Code in the datastore:
