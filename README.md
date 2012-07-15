@@ -16,8 +16,8 @@ Exchanging a temporary code for an access token
 -------------------
 
 A GET to the service, specifying a "client_id" contained in the lookup table and a pair "code"/"state"
-returned by GitHub authorization page (https://github.com/login/oauth/authorize), will trigger
-a call to the GitHub access token service (https://github.com/login/oauth/access_token) to exchange
+returned by GitHub authorization page (github.com/login/oauth/authorize), will trigger
+a call to the GitHub access token service (github.com/login/oauth/access_token) to exchange
 the temporary code for an access token.
 
 Example GET to exchange a GitHub temporary code for an access token:
