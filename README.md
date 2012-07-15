@@ -43,5 +43,5 @@ Deplying the app
 - Register a new app on Google App Engine and copy its Application ID
 - Paste the Application ID inseide the <application> tag in the file src/WEB-INF/appengine-web.xml
 - Recreate the war: ```ant war```
-- Upload the app the the newly created Application on Google App Engine: ```appcfg.sh update www```
+- Upload the code on the the newly created Application on Google App Engine: ```appcfg.sh update www```
 
